@@ -22,7 +22,7 @@ class GamesController < ApplicationController
   end
 
   def update
-    @game.update(params[:state])
+    @game.update(params[:state => []])
     render json: @game, status: 202
   end
 
