@@ -19,9 +19,6 @@ class GamesController < ApplicationController
     render json: @game
   end
 
-  def edit
-  end
-
   def update
     @game.update(game_params)
     render json: @game, status: 202
