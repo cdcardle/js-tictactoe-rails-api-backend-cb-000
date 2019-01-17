@@ -18,6 +18,10 @@ class GamesController < ApplicationController
     render json: @game, status: 201
   end
 
+  def edit
+    @game = Game.find(params[:id])
+  end
+
   def update
     @game.update(game_params)
     redirect_to game_path(@game)
