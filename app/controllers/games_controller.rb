@@ -6,10 +6,6 @@ class GamesController < ApplicationController
     render json: @game
   end
 
-  def show
-    render json: @game
-  end
-
   def new
     @game = Game.new
   end
@@ -17,6 +13,10 @@ class GamesController < ApplicationController
   def create
     @game = Game.create(game_params)
     render json: @game, status: 201
+  end
+
+  def show
+    render json: @game
   end
 
   def edit
