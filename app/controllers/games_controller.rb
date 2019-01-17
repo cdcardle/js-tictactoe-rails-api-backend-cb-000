@@ -1,4 +1,6 @@
 class GamesController < ApplicationController
+  before_action :set_game, only: [:show, :edit, :update]
+
   def index
     @games = Game.all
     render json: @posts, status: 200
