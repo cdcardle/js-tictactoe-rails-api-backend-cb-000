@@ -20,7 +20,7 @@ class GamesController < ApplicationController
 
   def update
     @game.update(game_params)
-    render json: @game, status: 202
+    redirect_to game_path(@game)
   end
 
   private
